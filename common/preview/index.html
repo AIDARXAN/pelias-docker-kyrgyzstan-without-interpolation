@@ -28,13 +28,18 @@
     var geocodingOptions = {
       url: 'http://localhost:4000/v1',
       expanded: true,
-      attribution: '<a href="https://openstreetmap.org/copyright">OpenStreetMap</a> and <a href="    https://geocode.earth/guidelines">others</a>'
+      attribution: '<a href="https://openstreetmap.org/copyright">OpenStreetMap</a> and <a href="    https://geocode.earth/guidelines">others</a>', 
+      params: {
+        'boundary.circle.lon':  74.598966,
+        'boundary.circle.lat': 42.875581,
+        'boundary.circle.radius': 15
+      }
     };
 
     L.control.geocoder(null, geocodingOptions).addTo(map);
 
-    L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
-      attribution: 'Tiles by <a href="http://stamen.com">Stamen Design</a>',
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 17,
       minZoom: 1
     }).addTo(map);
