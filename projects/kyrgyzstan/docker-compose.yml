@@ -20,8 +20,8 @@ services:
     container_name: pelias_api
     user: "${DOCKER_USER}"
     restart: always
-    environment: [ "PORT=4000" ]
-    ports: [ "4000:4000" ]
+    environment: [ "PORT=4001" ]
+    ports: [ "4001:4001" ]
     volumes:
       - "./pelias.json:/code/pelias.json"
   placeholder:
