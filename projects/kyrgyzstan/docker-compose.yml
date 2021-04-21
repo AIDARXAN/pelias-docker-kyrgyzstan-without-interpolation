@@ -49,13 +49,13 @@ services:
     volumes:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
-  openaddresses:
-    image: pelias/openaddresses:master
-    container_name: pelias_openaddresses
-    user: "${DOCKER_USER}"
-    volumes:
-      - "./pelias.json:/code/pelias.json"
-      - "${DATA_DIR}:/data"
+  # openaddresses:
+  #   image: pelias/openaddresses:master
+  #   container_name: pelias_openaddresses
+  #   user: "${DOCKER_USER}"
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"
+  #     - "${DATA_DIR}:/data"
   csv-importer:
     image: pelias/csv-importer:master
     container_name: pelias_csv_importer
@@ -71,16 +71,16 @@ services:
     volumes:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
-  interpolation:
-    image: pelias/interpolation:master
-    container_name: pelias_interpolation
-    user: "${DOCKER_USER}"
-    restart: always
-    environment: [ "PORT=4300" ]
-    ports: [ "4300:4300" ]
-    volumes:
-      - "./pelias.json:/code/pelias.json"
-      - "${DATA_DIR}:/data"
+  # interpolation:
+  #   image: pelias/interpolation:master
+  #   container_name: pelias_interpolation
+  #   user: "${DOCKER_USER}"
+  #   restart: always
+  #   environment: [ "PORT=4300" ]
+  #   ports: [ "4300:4300" ]
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"
+  #     - "${DATA_DIR}:/data"
   pip:
     image: pelias/pip-service:master
     container_name: pelias_pip-service
