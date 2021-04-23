@@ -41,7 +41,7 @@ set -x
 # cd /path/to/install
 
 # clone this repository
-git clone https://github.com/pelias/docker.git && cd docker
+git clone https://github.com/AIDARXAN/pelias-docker-kyrgyzstan-without-interpolation.git && cd docker
 
 # install pelias script
 # this is the _only_ setup command that should require `sudo`
